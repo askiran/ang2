@@ -40,10 +40,10 @@
                                             <td>{{ i + 1 }}</td>
                                             <td>{{ pump.pump_no }}</td>
                                             <td>100</td>
-                                            <td>122</td>
+                                            <td>{{ pump.capacity }}</td>
                                             <td>{{ pump.customer_name }}</td>
                                             <td>{{ pump.phone }}</td>
-                                            <td>Admin</td>
+                                            <td>{{ pump.assignedSiteManager }} </td>
                                             <td>{{ pump.status }}</td>
                                             <td class="ps-actions-col">
                                                     <a class="ps-action-btn ps-action-edit" data-toggle="modal" data-target="#exampleModal" style="font-size:11px!important">
