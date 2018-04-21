@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DashboardComponent } from '../app/components/dashboard/dashboard.component';
-import { PumpsComponent } from '../app/components/pumps/pumps.component';
-import { PumpDetailsComponent } from '../app/components/pump-details/pump-details.component';
-import { SettingsComponent } from '../app/components/settings/settings.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PumpsComponent } from './components/pumps/pumps.component';
+import { PumpDetailsComponent } from './components/pump-details/pump-details.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },

@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PumpService } from './services/pump.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [PumpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

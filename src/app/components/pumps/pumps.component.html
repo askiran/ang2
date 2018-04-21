@@ -36,50 +36,26 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>10</td>
+                                        <tr *ngFor="let pump of pumps; let i = index">
+                                            <td>{{ i + 1 }}</td>
+                                            <td>{{ pump.pump_no }}</td>
                                             <td>100</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>122</td>
+                                            <td>{{ pump.customer_name }}</td>
+                                            <td>{{ pump.phone }}</td>
+                                            <td>Admin</td>
+                                            <td>{{ pump.status }}</td>
                                             <td class="ps-actions-col">
-                                                <a href="#" class="ps-action-btn ps-action-edit" data-toggle="modal" data-target="#exampleModal">
-                                                    <i class="fa fa-pencil" aria-hidden="true"></i></a> 
-                                                <a href="#" class="ps-action-btn ps-action-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                            </td>                  
-                                        </tr>    
-                                        <tr>
-                                            <td>2</td>
-                                            <td>10</td>
-                                            <td>100</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td class="ps-actions-col">
-                                                    <a href="#" class="ps-action-btn ps-action-edit" data-toggle="modal" data-target="#exampleModal">
-                                                        <i class="fa fa-pencil" aria-hidden="true"></i></a> 
-                                                    <a href="#" class="ps-action-btn ps-action-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                            </td>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>10</td>
-                                            <td>100</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td class="ps-actions-col">
-                                                    <a href="#" class="ps-action-btn ps-action-edit" data-toggle="modal" data-target="#exampleModal">
-                                                        <i class="fa fa-pencil" aria-hidden="true"></i></a> 
-                                                    <a href="#" class="ps-action-btn ps-action-delete"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                            </td>  
-                                        </tr>                                         
+                                                    <a class="ps-action-btn ps-action-edit" data-toggle="modal" data-target="#exampleModal" style="font-size:11px!important">
+                                                        <!-- <i class="fa fa-pencil" aria-hidden="true" style="font-size:10px!important"></i> -->
+                                                        Edit
+                                                    </a> 
+                                                    <a (click)="removePump(pump)" class="ps-action-btn ps-action-delete" style="font-size:11px!important">
+                                                        <!-- <i class="fa fa-trash-o" aria-hidden="true">Remove</i> -->
+                                                        Remove
+                                                    </a>
+                                            </td>                    
+                                        </tr>                                 
                                     </tbody>
                                 </table>
                             </div>
