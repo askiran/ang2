@@ -1,0 +1,53 @@
+<div class="ps-right-section">
+    <div class="ps-pumpslist-sec">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="ps-page-header">Pump</h1>                    
+                </div>                 
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <!-- <form *ngIf="pumpForm"> -->
+                        <h3>Add New Pump</h3>
+                       
+                        <div class="form-group">
+                                <label for="email">Pump ID:</label>
+                                <input type="text" class="form-control" name="id" [(ngModel)]="newPump.pump_id" />
+                            </div>
+                            
+                            <div class="form-group">
+                                    <label for="email">Site Id: </label>
+                                <input type="text" class="form-control" name="name" [(ngModel)]="newPump.idsitemanager" />
+                            </div>
+                            
+                            <div class="form-group">
+                                    <label for="email">Capacity: </label>
+                                <input type="text" class="form-control" name="name" [(ngModel)]="newPump.capacity" />
+                            </div>
+
+                            <div class="form-group">
+                                    <label for="email">Customer Name: </label>
+                                <input type="text" class="form-control" name="name" [(ngModel)]="newPump.customer_name" />
+                            </div>
+
+                            <div class="form-group">
+                                    <label for="email">Phone Number: </label>
+                                <input type="text" class="form-control" name="name" [(ngModel)]="newPump.phone" />
+                            </div>
+                                
+                            <div class="form-group">
+                                    <label for="email"> Assigned To: </label>
+                                <input type="text"class="form-control"  name="name" [(ngModel)]="newPump.assignedSiteManager" />
+                            </div>
+    
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary" (click)="savePump(newPump)">Submit</button>
+                                <button type="button" class="btn btn-warning" (click)="cancelNewPump()">Cancel</button>
+                            </div>
+                    <!-- </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

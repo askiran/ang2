@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PumpsComponent } from './components/pumps/pumps.component';
+import { AddNewPumpComponent } from './components/pumps/add-new-pump/add-new-pump.component';
 import { PumpDetailsComponent } from './components/pump-details/pump-details.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -23,7 +24,8 @@ import { PumpService } from './services/pump.service';
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    SettingsComponent
+    SettingsComponent,
+    AddNewPumpComponent
   ],
   imports: [
     BrowserModule,

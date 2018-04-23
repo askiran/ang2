@@ -15,7 +15,9 @@
                     </div>               
                 </div>
                 <div class="col-sm-6">
-                    <button class="btn btn-primary ps-add-btn pull-right" data-toggle="modal" data-target="#exampleModal">Add New Pump</button>
+                    <a [routerLink]="['/add-new-pump']" href="/add-new-pump">
+                        <button class="btn btn-primary ps-add-btn pull-right" data-toggle="modal" data-target="#exampleModal">Add New Pump</button>
+                    </a>
                 </div>
             </div>
             <div class="row">
