@@ -25,20 +25,19 @@ export class AddNewPumpComponent implements OnInit {
 
   showAddPumpForm() {
     // resets form if edited user
-    if (this.pumps.length) {
-          this.newPump = {};
-    }
+  //  if (this.pumps.length) {
+      this.newPump = {};
+  //  }
     this.pumpForm = true;
     this.isNewPump = true;
-    console.log(this.pumpForm);
   }
 
   savePump (newPump: Pump) {
     console.log(newPump);
-    //if (this.isNewPump) {
+    // if (this.isNewPump) {
         this.pumpService.addNewPump(newPump);
-      //}
-      //this.pumForm=false;
+      // }
+      // this.pumForm=false;
   }
 }
 

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { PumpsComponent } from './components/pumps/pumps.component';
@@ -14,6 +15,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PumpService } from './services/pump.service';
+import { RestService } from './services/rest.service';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,13 @@ import { PumpService } from './services/pump.service';
   ],
   imports: [
     BrowserModule,
-    BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpModule
   ],
-  providers: [PumpService],
+  providers: [PumpService, RestService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

@@ -19,11 +19,16 @@ export class PumpsComponent implements OnInit {
   }
 
   getPumps = function(){
-    this.pumps = this.pumpService.getPumpsFromData();
+    this.pumps = this.pumpService.getPumps()
+                    .subscribe(
+                        (pumpsRes) => {
+                          this.pumps = pumpsRes.pumpData; console.log(this.pumps);
+                        }
+                    );
   };
 
   removePump(pump: Pump) {
-    this.pumpService.deletePump(pump);
+    // this.pumpService.deletePump(pump);
   }
 }
 

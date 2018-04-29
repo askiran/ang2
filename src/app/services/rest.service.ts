@@ -5,38 +5,36 @@ import {
     RequestOptions,
     Headers
 } from '@angular/http';
-//import { PumpForm } from '../models/pump';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class RestService {
 
-    constructor(private http: Http) { }
+  constructor(private http: Http) { }
 
-	post(url: string, body: any, headers: any) {
-        return this.http.post(url, body, headers).
-			map(response => {
-				response.json();
-			})
+  post(url: string, body: any, headers: any) {
+    return this.http.post(url, JSON.stringify(body), headers).
+      map(response => {
+        response.json();
+      });
+  }
+
+  get(url: string, body: any) {
+    return this.http.get(url).
+      map((response) => response.json());
     }
-    
-	get(url: string, body: any) {
-        return this.http.get(url, body).
-			map((response) => {
-				response.json();
-			})
+
+  patch(url: string, body: any) {
+    return this.http.patch(url, body)
+      .map((response) => {
+        response.json();
+      });
     }
-    
-	patch(url: string, body: any) {
-        return this.http.patch(url, body)
-			.map((response) => {
-				response.json();
-			})
-    }
-    
-	private logError(error: any) {
-		console.error(error.error);
-		throw error;
-	}
+
+  private logError(error: any) {
+    console.error(error.error);
+    throw error;
+  }
+
 }
 

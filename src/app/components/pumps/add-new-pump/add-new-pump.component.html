@@ -3,47 +3,91 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1 class="ps-page-header">Pump</h1>                    
+                    <h1 class="ps-page-header">Pumps</h1>                    
                 </div>                 
             </div>
             <div class="row">
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-12">
                     <!-- <form *ngIf="pumpForm"> -->
                         <h3>Add New Pump</h3>
-                       
-                        <div class="form-group">
-                                <label for="email">Pump ID:</label>
-                                <input type="text" class="form-control" name="id" [(ngModel)]="newPump.pump_id" />
+                        <div class="row">   
+                            <div class="col-sm-12 col-md-4">
+                                <div class="form-group">
+                                    <label for="email">Pump Number:</label>
+                                    <input type="text" class="form-control" name="pump_no" [(ngModel)]="newPump.pump_no" />
+                                </div>
                             </div>
-                            
-                            <div class="form-group">
+
+                            <div class="col-sm-12 col-md-4">
+                                <div class="form-group">
                                     <label for="email">Site Id: </label>
-                                <input type="text" class="form-control" name="name" [(ngModel)]="newPump.idsitemanager" />
+                                    <input type="text" class="form-control" name="idsitemanager" [(ngModel)]="newPump.idsitemanager" />
+                                </div>
                             </div>
                             
-                            <div class="form-group">
+                            <div class="col-sm-12 col-md-4">
+                                <div class="form-group">
                                     <label for="email">Capacity: </label>
-                                <input type="text" class="form-control" name="name" [(ngModel)]="newPump.capacity" />
+                                    <input type="text" class="form-control" name="capacity" [(ngModel)]="newPump.capacity" />
+                                </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="col-sm-12 col-md-4">
+                                <div class="form-group">
+                                    <label for="email">Voltage: </label>
+                                    <input type="text" class="form-control" name="voltage" [(ngModel)]="newPump.voltage" />
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4">
+                                <div class="form-group">
+                                    <label for="email">Water: </label>
+                                    <input type="text" class="form-control" name="water" [(ngModel)]="newPump.water" />
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4">
+                                <div class="form-group">
+                                    <label for="email">Current: </label>
+                                    <input type="text" class="form-control" name="current" [(ngModel)]="newPump.current" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <div class="form-group">
+                                    <label for="email">Max Solar Energy: </label>
+                                    <input type="text" class="form-control" name="max_solar_energy" [(ngModel)]="newPump.max_solar_energy" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <div class="form-group">
+                                    <label for="email">Max Water Output: </label>
+                                    <input type="text" class="form-control" name="max_water_output" [(ngModel)]="newPump.max_water_output" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <div class="form-group">
                                     <label for="email">Customer Name: </label>
-                                <input type="text" class="form-control" name="name" [(ngModel)]="newPump.customer_name" />
+                                    <input type="text" class="form-control" name="customer_name" [(ngModel)]="newPump.customer_name" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <div class="form-group">
+                                    <label for="email">Phone Number: </label>
+                                    <input type="text" class="form-control" name="phone" [(ngModel)]="newPump.phone" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <div class="form-group">
+                                    <label for="email"> Assigned To: </label>
+                                    <input type="text"class="form-control"  name="assignedSiteManager" [(ngModel)]="newPump.assignedSiteManager" />
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                    <label for="email">Phone Number: </label>
-                                <input type="text" class="form-control" name="name" [(ngModel)]="newPump.phone" />
-                            </div>
-                                
-                            <div class="form-group">
-                                    <label for="email"> Assigned To: </label>
-                                <input type="text"class="form-control"  name="name" [(ngModel)]="newPump.assignedSiteManager" />
-                            </div>
-    
-                            <div class="form-group">
-                                <button type="button" class="btn btn-primary" (click)="savePump(newPump)">Submit</button>
-                                <button type="button" class="btn btn-warning" (click)="cancelNewPump()">Cancel</button>
+                            <div class="col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary" (click)="savePump(newPump)">Submit</button>
+                                    <button type="button" class="btn btn-warning" (click)="cancelNewPump()">Cancel</button>
+                                </div>
                             </div>
                     <!-- </form> -->
                 </div>
