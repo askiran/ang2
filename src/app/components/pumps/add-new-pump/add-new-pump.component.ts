@@ -19,25 +19,15 @@ export class AddNewPumpComponent implements OnInit {
   editedPump: any= {};
   constructor(private pumpService: PumpService) { }
 
-  ngOnInit() {
-    this.showAddPumpForm();
-  }
-
-  showAddPumpForm() {
-    // resets form if edited user
-  //  if (this.pumps.length) {
-      this.newPump = {};
-  //  }
-    this.pumpForm = true;
-    this.isNewPump = true;
-  }
+  ngOnInit() {}
 
   savePump (newPump: Pump) {
     console.log(newPump);
-    // if (this.isNewPump) {
-        this.pumpService.addNewPump(newPump);
-      // }
-      // this.pumForm=false;
+    this.pumpService.addNewPump(newPump);
+  }
+
+  cancelNewPump () {
+    this.newPump = {};
   }
 }
 
